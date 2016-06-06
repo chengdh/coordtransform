@@ -104,6 +104,16 @@
         }
     };
 
+    /**
+     * wgs84到百度座标系的转换
+    * */
+    var wgs84tobd09 = function wgs84tobd09(lng, lat) {
+      //先转换为gcj02
+      var ret = wgs84togcj02(lng,lat);
+      //再转换为bd09
+      return gcj02tobd09(ret[0],ret[1]);
+    };
+
     var transformlat = function transformlat(lng, lat) {
         var ret = -100.0 + 2.0 * lng + 3.0 * lat + 0.2 * lat * lat + 0.1 * lng * lat + 0.2 * Math.sqrt(Math.abs(lng));
         ret += (20.0 * Math.sin(6.0 * lng * PI) + 20.0 * Math.sin(2.0 * lng * PI)) * 2.0 / 3.0;
