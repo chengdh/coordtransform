@@ -144,6 +144,7 @@
         bd09togcj02: bd09togcj02,
         gcj02tobd09: gcj02tobd09,
         wgs84togcj02: wgs84togcj02,
-        gcj02towgs84: gcj02towgs84
+        gcj02towgs84: gcj02towgs84,
+        wgs84tobd09: wgs84tobd09
     }
 }));
